@@ -3,6 +3,8 @@ Spring Autowired Revealed
 
 A toy example of a working re-implementation of [Spring's Autowired](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html) functionality for dependency injection.
 
+I wrote this while writing a blog post title "It's not magic, you just don't understand it yet." Have a look at that here: <http://ryanogles.by/2016/11/19/its-not-magic-you-just-dont-understand-it-yet.html>
+
 ## Usage
 
 `./go.sh`
@@ -14,7 +16,7 @@ AutowiredComponent ONE is here
 AutowiredComponent TWO is here
 ```
 
-Or load up the project in your IDE (Eclipse, IntelliJ, etc) and run Main.java. 
+Or load up the project in your IDE (Eclipse, IntelliJ, etc) and run Main.java.
 
 
 ## How it works
@@ -36,4 +38,3 @@ Nevertheless, the basic flow of this example is as follows:
     1. At this point, we can instantiate the component and cache it.
     1. Once we have cached all of the dependencies for a particular component, we can then call its constructor, using the cached dependencies
 1. Finally, we get the instance of `AComponent` from the `ComponentRegistry`, and invoke the `takeRoll` method. This will invoke the `takeRoll` method of its injected dependencies.
-
